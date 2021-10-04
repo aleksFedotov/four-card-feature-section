@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root {
+  --color-red: hsl(0, 78%, 62%);
+  --color-cyan: hsl(180, 62%, 55%);
+  --color-orange: hsl(34, 97%, 64%);
+  --color-blue: hsl(212, 86%, 64%);
+  --color-very-dark-blue: hsl(234, 12%, 34%);
+  --color-grayish-blue: hsl(229, 6%, 66%);
+  --color-very-light-gray: hsl(0, 0%, 98%);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.5;
+  padding: 7rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--color-very-light-gray);
+}
+
+.container {
+  max-width: 110rem;
+  width: 100%;
+  margin-bottom: 8rem;
+}
+
+.header {
+  max-width: 50rem;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+.heading-thin {
+  font-size: 3.6rem;
+  font-weight: 200;
+}
+
+.heading-bold {
+  font-size: 3.6rem;
+}
+
+.text {
+  margin-top: 1.5rem;
+  color: var(--color-grayish-blue);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 3rem;
+}
+
+.card {
+  background-color: #fff;
+  padding: 3rem;
+  position: relative;
+  box-shadow: 0 1.5rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.8rem;
+}
+
+.card h1 {
+  font-size: 2rem;
+}
+.card .text {
+  font-size: 1.4rem;
+  margin-top: 1rem;
+}
+
+.card-supervisor {
+  border-top: 4px solid var(--color-cyan);
+  grid-row: 1 / span 2;
+  grid-column: 1 / 2;
+  align-self: center;
+}
+
+.card-team-builder {
+  border-top: 4px solid var(--color-red);
+}
+
+.card-karma {
+  border-top: 4px solid var(--color-orange);
+}
+
+.card-calculator {
+  border-top: 4px solid var(--color-blue);
+  grid-row: 1 / span 2;
+  grid-column: 3 / 4;
+  align-self: center;
+}
+
+.image-container {
+  margin-top: 12rem;
+  position: relative;
+}
+
+.card-image {
+  position: absolute;
+  width: 6rem;
+  height: 6rem;
+  right: 0;
+  bottom: 0;
+}
+
+@media only screen and (max-width: 65.625em) {
+  .container {
+    max-width: 65rem;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cards > * {
+    grid-row: auto;
+    grid-column: auto;
+    align-self: auto;
+  }
+}
+
+@media only screen and (max-width: 43.75em) {
+  .container {
+    max-width: 35rem;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .heading-thin {
+    font-size: 2.5rem;
+  }
+
+  .heading-bold {
+    font-size: 2.5rem;
+  }
+
+  .heading-thin {
+    font-size: 2.5rem;
+    font-weight: 200;
+  }
+
+  .heading-bold {
+    font-size: 2.5rem;
+  }
+
+  .image-container {
+    margin-top: 9rem;
+  }
+}
